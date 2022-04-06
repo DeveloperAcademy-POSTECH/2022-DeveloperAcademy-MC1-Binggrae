@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .font(.custom("NotoSansCJKkr-Regular", size: 28))
-            .padding()
+                .padding()
     }
 }
 

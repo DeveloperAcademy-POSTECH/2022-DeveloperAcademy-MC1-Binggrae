@@ -117,6 +117,8 @@
 				C6390D4427FD743400671656 /* MC1_BinggraeApp.swift */,
 				C6390D7027FD749B00671656 /* Views */,
 				C6390D4827FD743600671656 /* Assets.xcassets */,
+				C6390D8527FD7A3300671656 /* Models */,
+				C6390D8427FD7A1500671656 /* Components */,
 				C6390D6E27FD748200671656 /* Resources */,
 				C6390D4A27FD743600671656 /* Preview Content */,
 			);
@@ -178,6 +180,20 @@
 				C6390D4627FD743400671656 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C6390D8427FD7A1500671656 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C6390D8527FD7A3300671656 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
