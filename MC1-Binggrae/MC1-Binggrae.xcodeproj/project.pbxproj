@@ -23,6 +23,14 @@
 		C6390D8027FD74CC00671656 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6390D7727FD74CB00671656 /* NotoSansCJKkr-Black.otf */; };
 		C6390D8127FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6390D7827FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf */; };
 		C6390D8227FD74CC00671656 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6390D7927FD74CC00671656 /* NotoSansCJKkr-Medium.otf */; };
+		C6390D8927FD8A6D00671656 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6390D8827FD8A6D00671656 /* CreateView.swift */; };
+		C6C7AB2527FDE78300185AAB /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2427FDE78300185AAB /* TextInputView.swift */; };
+		C6C7AB2727FDEA7800185AAB /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2627FDEA7800185AAB /* TreeListView.swift */; };
+		C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2827FE58D700185AAB /* XButtonView.swift */; };
+		C6C7AB2D27FE697B00185AAB /* treeData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6C7AB2C27FE697B00185AAB /* treeData.json */; };
+		C6C7AB3227FE6AEA00185AAB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3127FE6AEA00185AAB /* Tree.swift */; };
+		C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3327FE6C5400185AAB /* ModelData.swift */; };
+		C6C7AB3627FEB8C900185AAB /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		C6390D7827FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
 		C6390D7927FD74CC00671656 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		C6390D8327FD74ED00671656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C6390D8827FD8A6D00671656 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		C6C7AB2427FDE78300185AAB /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		C6C7AB2627FDEA7800185AAB /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
+		C6C7AB2827FE58D700185AAB /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
+		C6C7AB2C27FE697B00185AAB /* treeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeData.json; sourceTree = "<group>"; };
+		C6C7AB3127FE6AEA00185AAB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		C6C7AB3327FE6C5400185AAB /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C6390D6F27FD749200671656 /* fonts */,
+				C6C7AB2C27FE697B00185AAB /* treeData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -178,6 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				C6390D4627FD743400671656 /* ContentView.swift */,
+				C6390D8827FD8A6D00671656 /* CreateView.swift */,
+				C6C7AB2427FDE78300185AAB /* TextInputView.swift */,
+				C6C7AB2627FDEA7800185AAB /* TreeListView.swift */,
+				C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +206,7 @@
 		C6390D8427FD7A1500671656 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C6C7AB2827FE58D700185AAB /* XButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,6 +214,8 @@
 		C6390D8527FD7A3300671656 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6C7AB3127FE6AEA00185AAB /* Tree.swift */,
+				C6C7AB3327FE6C5400185AAB /* ModelData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +327,7 @@
 				C6390D7D27FD74CC00671656 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				C6390D4C27FD743600671656 /* Preview Assets.xcassets in Resources */,
 				C6390D8027FD74CC00671656 /* NotoSansCJKkr-Black.otf in Resources */,
+				C6C7AB2D27FE697B00185AAB /* treeData.json in Resources */,
 				C6390D7E27FD74CC00671656 /* NotoSansCJKkr-Thin.otf in Resources */,
 				C6390D8127FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf in Resources */,
 				C6390D7B27FD74CC00671656 /* NotoSansCJKkr-Regular.otf in Resources */,
@@ -335,7 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C7AB3227FE6AEA00185AAB /* Tree.swift in Sources */,
 				C6390D4727FD743400671656 /* ContentView.swift in Sources */,
+				C6C7AB2727FDEA7800185AAB /* TreeListView.swift in Sources */,
+				C6C7AB3627FEB8C900185AAB /* TreeDetailView.swift in Sources */,
+				C6390D8927FD8A6D00671656 /* CreateView.swift in Sources */,
+				C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */,
+				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,
+				C6C7AB2527FDE78300185AAB /* TextInputView.swift in Sources */,
 				C6390D4527FD743400671656 /* MC1_BinggraeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
