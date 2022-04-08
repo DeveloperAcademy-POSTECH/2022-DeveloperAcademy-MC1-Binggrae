@@ -8,6 +8,7 @@ import SwiftUI
 
 struct CreateView: View {
     
+    //NavTitle
     func getDate() -> String {
         let dFormatter = DateFormatter()
         dFormatter.locale = Locale(identifier: "ko_KR")
@@ -15,54 +16,70 @@ struct CreateView: View {
         return dFormatter.string(from: Date())
     }
     
+    //Define
     @State private var isNext: Bool = false
     @State private var title: String = ""
     @State private var description: String = ""
+    @State private var selectedTree: Tree?
     
+    //init
     init() {
             UITextView.appearance().backgroundColor = .clear
     }
 
-    
+    //body
     var body: some View {
+        
+        let lightGray = Color(red: 246 / 255, green: 246 / 255, blue: 246 / 255)
 
         NavigationView {
             
             VStack{
                 
-                //탭뷰
+                //TabView
                 TabView{
-                                        
-                    TextInputView(title: $title, description: $description, isNext: $isNext)
-                    TreeListView(isNext: $isNext)
+                                       
+                    //FirstPage
+                    TextInputView(
+                        title: $title,
+                        description: $description,
+                        isNext: $isNext
+                    )
                     
-                    
+                    //SecondPage
+                    TreeListView(
+                        title: $title,
+                        description: $description,
+                        isNext: $isNext,
+                        selectedTree: $selectedTree
+                    )
                 }
                 .tabViewStyle(.page)
                 .padding(10)
                 
-                let groundColor = Color(red: 246 / 255, green: 246 / 255, blue: 246 / 255)
 
-                //태우기 버튼
+                //태우기 Button
                 Button {
+//                    let tree: Tree? = selectedTree!
+                    print(title, description, selectedTree!)
                 } label: {
                     Text("태우기")
-
                         .foregroundColor(isNext ? Color.black : Color.primary.opacity(0.25))
                         .font(.custom("NotoSansCJKkr-Medium", size: 20))
                         .frame(height: 60)
                         .frame(maxWidth: .infinity)
-                        .background(isNext ? .white : groundColor)
+                        .background(isNext ? .white : lightGray)
                         .clipShape(Capsule())
                         .padding(.horizontal, 10)
                 }
                 .disabled(!isNext)
 
             }
-            .background(.orange)
+            .background(.black)
             .navigationTitle(getDate())
             .navigationBarTitleDisplayMode(.inline)
         }
+        
     }
     
 }

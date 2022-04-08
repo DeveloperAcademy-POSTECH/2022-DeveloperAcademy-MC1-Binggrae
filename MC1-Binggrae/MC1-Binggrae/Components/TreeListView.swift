@@ -9,77 +9,61 @@ import SwiftUI
 
 struct TreeListView: View {
     
+    //Define
+    @Binding var title: String
+    @Binding var description: String
     @Binding var isNext: Bool
+    @Binding var selectedTree: Tree?
     
+    //init
     func initialize(){
             UITableView.appearance().backgroundColor = .clear
             UITableViewCell.appearance().backgroundColor = .clear
-            
             UITableView.appearance().tableFooterView = UIView()
      }
 
+    //body
     var body: some View {
         
         VStack(){
             
-            //X버튼
+            //X Button
             XButtonView()
             
             let notoMedium = "NotoSansCJKkr-Medium"
             
-            //장작선택
+            //Page Title
             Text("장작선택")
                 .font(.custom(notoMedium, size: 20))
                 .padding(15)
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 20)
             
-            Divider()
-                .padding(.horizontal, 20)
-            
-            //장작리스트
-            
+            //Tree List
             List {
                 ForEach(trees){
                     tree in
-                    TreeDetailView(tree: tree)
+                    
+                    //Tree Row
+                    TreeRowView(
+                        selectedTree: $selectedTree,
+                        tree: tree
+                    )
+                    .listRowInsets(EdgeInsets())
                 }
             }
+            .listStyle(PlainListStyle())
             .onAppear(){
                 isNext = true
                 self.initialize()
             }
             
-
-            
-//            //장작정보
-//            Group{
-//                //image
-//                tree.image
-//                    .resizable()
-//                    .frame(width:150, height: 150)
-//                //name
-//                Text(tree.name)
-//                    .font(.custom(notoBold, size: 20))
-//                //time
-//                Text("\(String(tree.time))분")
-//                    .font(.custom(notoBold, size: 40))
-//                //description
-//                Text(tree.description)
-//                    .font(.custom(notoBold, size: 20))
-//                    .padding(.horizontal, 20)
-//                    .multilineTextAlignment(TextAlignment.center)
-//            }
-//            .onAppear(){
-//                isNext = true
-//            }
-            
-                 
-            Spacer()
-            
+            //Empty Space
+            Text("")
+                .frame(height: 20)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background()
+        .background(Color.white)
         .cornerRadius(30)
         .padding(.bottom, 50)
     }

@@ -30,7 +30,8 @@
 		C6C7AB2D27FE697B00185AAB /* treeData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6C7AB2C27FE697B00185AAB /* treeData.json */; };
 		C6C7AB3227FE6AEA00185AAB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3127FE6AEA00185AAB /* Tree.swift */; };
 		C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3327FE6C5400185AAB /* ModelData.swift */; };
-		C6C7AB3627FEB8C900185AAB /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */; };
+		C6C7AB3A27FEC25B00185AAB /* TreeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3927FEC25B00185AAB /* TreeRowView.swift */; };
+		C6C7AB3C27FEC3D800185AAB /* Firewood.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB3B27FEC3D800185AAB /* Firewood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,9 @@
 		C6C7AB2C27FE697B00185AAB /* treeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeData.json; sourceTree = "<group>"; };
 		C6C7AB3127FE6AEA00185AAB /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		C6C7AB3327FE6C5400185AAB /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		C6C7AB3927FEC25B00185AAB /* TreeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeRowView.swift; sourceTree = "<group>"; };
+		C6C7AB3B27FEC3D800185AAB /* Firewood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firewood.swift; sourceTree = "<group>"; };
+		C6C7AB3D27FECB6F00185AAB /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		C6390D3827FD743400671656 = {
 			isa = PBXGroup;
 			children = (
+				C6C7AB3D27FECB6F00185AAB /* Script.sh */,
 				C6390D4327FD743400671656 /* MC1-Binggrae */,
 				C6390D5427FD743600671656 /* MC1-BinggraeTests */,
 				C6390D5E27FD743600671656 /* MC1-BinggraeUITests */,
@@ -196,9 +200,6 @@
 			children = (
 				C6390D4627FD743400671656 /* ContentView.swift */,
 				C6390D8827FD8A6D00671656 /* CreateView.swift */,
-				C6C7AB2427FDE78300185AAB /* TextInputView.swift */,
-				C6C7AB2627FDEA7800185AAB /* TreeListView.swift */,
-				C6C7AB3527FEB8C900185AAB /* TreeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +207,9 @@
 		C6390D8427FD7A1500671656 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C6C7AB2627FDEA7800185AAB /* TreeListView.swift */,
+				C6C7AB3927FEC25B00185AAB /* TreeRowView.swift */,
+				C6C7AB2427FDE78300185AAB /* TextInputView.swift */,
 				C6C7AB2827FE58D700185AAB /* XButtonView.swift */,
 			);
 			path = Components;
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C7AB3127FE6AEA00185AAB /* Tree.swift */,
+				C6C7AB3B27FEC3D800185AAB /* Firewood.swift */,
 				C6C7AB3327FE6C5400185AAB /* ModelData.swift */,
 			);
 			path = Models;
@@ -360,10 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C7AB3C27FEC3D800185AAB /* Firewood.swift in Sources */,
 				C6C7AB3227FE6AEA00185AAB /* Tree.swift in Sources */,
 				C6390D4727FD743400671656 /* ContentView.swift in Sources */,
 				C6C7AB2727FDEA7800185AAB /* TreeListView.swift in Sources */,
-				C6C7AB3627FEB8C900185AAB /* TreeDetailView.swift in Sources */,
+				C6C7AB3A27FEC25B00185AAB /* TreeRowView.swift in Sources */,
 				C6390D8927FD8A6D00671656 /* CreateView.swift in Sources */,
 				C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */,
 				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,

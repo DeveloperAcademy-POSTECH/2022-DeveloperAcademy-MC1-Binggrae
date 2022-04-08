@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Tree: Identifiable, Codable, Hashable {
+struct Tree: Codable, Hashable, Identifiable {
 
     var name: String
     var id: Int

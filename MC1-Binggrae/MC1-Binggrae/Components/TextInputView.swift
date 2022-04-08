@@ -9,29 +9,22 @@ import SwiftUI
 
 struct TextInputView: View {
     
+    //Define
     @Binding var title: String
     @Binding var description: String
     @Binding var isNext: Bool
 
-    
+    //body
     var body: some View {
         VStack(spacing: 20){
             
-            //X버튼
-            Button{
-            } label: {
-                Image(systemName: "xmark")
-                    .foregroundColor(.black)
-                    .imageScale(.large)
-            }
-            .padding(.top, 20)
-            .padding(.trailing, 20)
-            .frame(maxWidth: .infinity, alignment: .trailing)
+            //X Button
+            XButtonView()
 
             let groundColor = Color(red: 246 / 255, green: 246 / 255, blue: 246 / 255)
             let notoBold = "NotoSansCJKkr-Bold"
             
-            //제목
+            //Title
             ZStack(alignment: .center) {
     
                 TextField("", text: $title)
@@ -51,7 +44,7 @@ struct TextInputView: View {
                         }
             }
 
-            //내용
+            //Description
             ZStack(alignment: .topLeading) {
                 
                 let placeholder: String = "장작에 태우고 싶은 것을 여기에 적으세요."
@@ -79,8 +72,6 @@ struct TextInputView: View {
             .onAppear(){
                 isNext = false
             }
-            
-
         }
         .background()
         .cornerRadius(30)
