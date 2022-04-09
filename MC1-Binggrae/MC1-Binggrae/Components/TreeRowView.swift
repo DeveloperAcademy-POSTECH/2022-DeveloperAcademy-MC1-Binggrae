@@ -11,7 +11,6 @@ struct TreeRowView: View {
     
     
     //Define
-    @State var selectedItem: Int?
     @Binding var selectedTree: Tree?
     
     var tree: Tree
@@ -22,7 +21,6 @@ struct TreeRowView: View {
         
         //Tree
         Button{
-            selectedItem = tree.id
             selectedTree = tree
         } label: {
             HStack{
@@ -49,7 +47,7 @@ struct TreeRowView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(20)
-        .background(selectedItem == tree.id ? Color.gray.opacity(0.1) : Color.white)
+        .background(selectedTree?.id == tree.id ? Color.gray.opacity(0.1) : Color.white)
         .listRowInsets(EdgeInsets())
     
     }
