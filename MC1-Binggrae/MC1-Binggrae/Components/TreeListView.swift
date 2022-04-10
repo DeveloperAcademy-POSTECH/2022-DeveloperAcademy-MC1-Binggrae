@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TreeListView: View {
     
-    
     //Define
     @Binding var title: String
     @Binding var description: String
@@ -50,7 +49,6 @@ struct TreeListView: View {
                         selectedTree: $selectedTree,
                         tree: tree
                     )
-                    .listRowInsets(EdgeInsets())
                 }
             }
             .listStyle(PlainListStyle())

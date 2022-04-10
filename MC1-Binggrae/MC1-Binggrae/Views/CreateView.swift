@@ -60,8 +60,14 @@ struct CreateView: View {
 
                 //태우기 Button
                 Button {
-//                    let tree: Tree? = selectedTree!
-                    print(title, description, selectedTree!)
+                    let tree: Tree? = selectedTree
+                    var data = Firewood()
+                    data.title = title
+                    data.description = description
+                    data.tree = tree
+                    print(data)
+                    
+                    print(data)
                 } label: {
                     Text("태우기")
                         .foregroundColor(isNext ? Color.black : Color.primary.opacity(0.25))

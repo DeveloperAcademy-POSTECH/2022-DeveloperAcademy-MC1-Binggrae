@@ -9,14 +9,13 @@ import SwiftUI
 
 struct TreeRowView: View {
     
-    
     //Define
     @Binding var selectedTree: Tree?
     
     var tree: Tree
     let notoMedium = "NotoSansCJKkr-Medium"
     
-    //bodyd
+    //body
     var body: some View {
         
         //Tree
