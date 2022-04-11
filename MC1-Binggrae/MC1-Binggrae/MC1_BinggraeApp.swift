@@ -13,5 +13,7 @@ struct MC1_BinggraeApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        // test 입니다. push test
     }
 }
