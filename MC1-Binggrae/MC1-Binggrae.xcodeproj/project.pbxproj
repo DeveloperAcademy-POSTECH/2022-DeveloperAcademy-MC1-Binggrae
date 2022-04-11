@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60D86EF2803F38000B38F62 /* FirewoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86EE2803F38000B38F62 /* FirewoodView.swift */; };
+		C60D86F12803F38900B38F62 /* FireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F02803F38900B38F62 /* FireView.swift */; };
+		C60D86F32803F39600B38F62 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F22803F39600B38F62 /* TimerPickerView.swift */; };
+		C60D86F62803F49E00B38F62 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F52803F49E00B38F62 /* AudioManager.swift */; };
 		C6390D4527FD743400671656 /* MC1_BinggraeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6390D4427FD743400671656 /* MC1_BinggraeApp.swift */; };
 		C6390D4727FD743400671656 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6390D4627FD743400671656 /* ContentView.swift */; };
 		C6390D4927FD743600671656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6390D4827FD743600671656 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C60D86EE2803F38000B38F62 /* FirewoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirewoodView.swift; sourceTree = "<group>"; };
+		C60D86F02803F38900B38F62 /* FireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireView.swift; sourceTree = "<group>"; };
+		C60D86F22803F39600B38F62 /* TimerPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		C60D86F52803F49E00B38F62 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		C6390D4127FD743400671656 /* MC1-Binggrae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-Binggrae.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6390D4427FD743400671656 /* MC1_BinggraeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC1_BinggraeApp.swift; sourceTree = "<group>"; };
 		C6390D4627FD743400671656 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C60D86F42803F39B00B38F62 /* FirewoodViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C60D86F22803F39600B38F62 /* TimerPickerView.swift */,
+				C60D86F02803F38900B38F62 /* FireView.swift */,
+			);
+			path = FirewoodViewComponents;
+			sourceTree = "<group>";
+		};
 		C6390D3827FD743400671656 = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +155,8 @@
 				C6390D7027FD749B00671656 /* Views */,
 				C6390D4827FD743600671656 /* Assets.xcassets */,
 				C6390D8527FD7A3300671656 /* Models */,
-				C6390D8427FD7A1500671656 /* Components */,
+				C60D86F42803F39B00B38F62 /* FirewoodViewComponents */,
+				C6390D8427FD7A1500671656 /* CreateViewComponents */,
 				C6390D6E27FD748200671656 /* Resources */,
 				C6390D4A27FD743600671656 /* Preview Content */,
 			);
@@ -200,11 +218,12 @@
 			children = (
 				C6390D4627FD743400671656 /* ContentView.swift */,
 				C6390D8827FD8A6D00671656 /* CreateView.swift */,
+				C60D86EE2803F38000B38F62 /* FirewoodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C6390D8427FD7A1500671656 /* Components */ = {
+		C6390D8427FD7A1500671656 /* CreateViewComponents */ = {
 			isa = PBXGroup;
 			children = (
 				C6C7AB2627FDEA7800185AAB /* TreeListView.swift */,
@@ -212,13 +231,14 @@
 				C6C7AB2427FDE78300185AAB /* TextInputView.swift */,
 				C6C7AB2827FE58D700185AAB /* XButtonView.swift */,
 			);
-			path = Components;
+			path = CreateViewComponents;
 			sourceTree = "<group>";
 		};
 		C6390D8527FD7A3300671656 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C6C7AB3127FE6AEA00185AAB /* Tree.swift */,
+				C60D86F52803F49E00B38F62 /* AudioManager.swift */,
 				C6C7AB3B27FEC3D800185AAB /* Firewood.swift */,
 				C6C7AB3327FE6C5400185AAB /* ModelData.swift */,
 			);
@@ -371,8 +391,12 @@
 				C6C7AB2727FDEA7800185AAB /* TreeListView.swift in Sources */,
 				C6C7AB3A27FEC25B00185AAB /* TreeRowView.swift in Sources */,
 				C6390D8927FD8A6D00671656 /* CreateView.swift in Sources */,
+				C60D86F12803F38900B38F62 /* FireView.swift in Sources */,
 				C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */,
+				C60D86F62803F49E00B38F62 /* AudioManager.swift in Sources */,
+				C60D86F32803F39600B38F62 /* TimerPickerView.swift in Sources */,
 				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,
+				C60D86EF2803F38000B38F62 /* FirewoodView.swift in Sources */,
 				C6C7AB2527FDE78300185AAB /* TextInputView.swift in Sources */,
 				C6390D4527FD743400671656 /* MC1_BinggraeApp.swift in Sources */,
 			);

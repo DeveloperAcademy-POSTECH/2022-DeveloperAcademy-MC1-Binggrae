@@ -9,12 +9,7 @@ import SwiftUI
 struct CreateView: View {
     
     //NavTitle
-    func getDate() -> String {
-        let dFormatter = DateFormatter()
-        dFormatter.locale = Locale(identifier: "ko_KR")
-        dFormatter.dateFormat = "yyyy년 MM월 dd일"
-        return dFormatter.string(from: Date())
-    }
+    
     
     //Define
     @State private var isNext: Bool = false
@@ -64,6 +59,7 @@ struct CreateView: View {
                     let tree: Tree? = selectedTree
                     let data = Firewood(title: title, description: description, tree: tree)
                     
+                    FirewoodView(data: data)
                     print(data)
                 } label: {
                     Text("태우기")
@@ -91,4 +87,11 @@ struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
         CreateView()
     }
+}
+
+func getDate() -> String {
+    let dFormatter = DateFormatter()
+    dFormatter.locale = Locale(identifier: "ko_KR")
+    dFormatter.dateFormat = "yyyy년 MM월 dd일"
+    return dFormatter.string(from: Date())
 }
