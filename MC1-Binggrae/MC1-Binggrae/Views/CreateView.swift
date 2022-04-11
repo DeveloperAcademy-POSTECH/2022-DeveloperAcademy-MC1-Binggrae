@@ -60,12 +60,9 @@ struct CreateView: View {
 
                 //태우기 Button
                 Button {
+                    
                     let tree: Tree? = selectedTree
-                    var data = Firewood()
-                    data.title = title
-                    data.description = description
-                    data.tree = tree
-                    print(data)
+                    let data = Firewood(title: title, description: description, tree: tree)
                     
                     print(data)
                 } label: {

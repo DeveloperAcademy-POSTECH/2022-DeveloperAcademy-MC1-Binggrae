@@ -6,14 +6,15 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 struct Firewood{
 
-    //메모
+    //User's Text Inputs
     var title: String?
     var description: String?
+    
+    //Selected Tree
     var tree: Tree?
 
 }
