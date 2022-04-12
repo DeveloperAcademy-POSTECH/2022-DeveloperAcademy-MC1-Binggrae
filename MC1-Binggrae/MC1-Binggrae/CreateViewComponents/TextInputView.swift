@@ -12,70 +12,75 @@ struct TextInputView: View {
     //Define
     @Binding var title: String
     @Binding var description: String
-    @Binding var isNext: Bool
+    let notoLight = "NotoSansCJKkr-Light"
+    let notoRegular = "NotoSansCJKkr-Regular"
+    let placeholderFontColor = Color(red: 107 / 255, green: 107 / 255, blue: 107 / 255)
+    let roundColor = Color(red: 58 / 255, green: 58 / 255, blue: 58 / 255)
+    let backgroundColor = Color(red: 27 / 255, green: 27 / 255, blue: 27 / 255)
+    @FocusState private var isFocused: Bool
 
+    
     //body
     var body: some View {
-        VStack(spacing: 20){
-            
-            //X Button
-            XButtonView()
-
-            let groundColor = Color(red: 246 / 255, green: 246 / 255, blue: 246 / 255)
-            let notoBold = "NotoSansCJKkr-Bold"
+        VStack{
             
             //Title
-            ZStack(alignment: .center) {
-    
-                TextField("", text: $title)
-                    .font(.custom(notoBold, size: 20))
-                    .padding(15)
-                    .multilineTextAlignment(TextAlignment.center)
-                    .background(
-                        RoundedRectangle(cornerRadius: 40)
-                            .fill(groundColor)
-                    )
-                    .padding(.horizontal, 20)
-                
-                if title.isEmpty {
-                            Text("제목")
-                                .font(.custom(notoBold, size: 20))
-                                .foregroundColor(Color.primary.opacity(0.25))
-                        }
-            }
+            Group{
+                Text("제목")
+                    .font(.custom(notoRegular, size: 12))
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .foregroundColor(.white)
+                    .padding(.top,60)
 
-            //Description
-            ZStack(alignment: .topLeading) {
-                
-                let placeholder: String = "장작에 태우고 싶은 것을 여기에 적으세요."
-
-                TextEditor(text: $description)
-                    .font(.custom(notoBold, size: 20))
-                    .foregroundColor(Color.black)
-                    .padding(.top, 30)
-                    .padding(.horizontal, 20)
-                    .lineSpacing(10)
-                    .background(groundColor)
-                    .cornerRadius(40)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
-
-                if description.isEmpty{
-                    Text(placeholder)
-                        .font(.custom(notoBold, size: 20))
-                        .lineSpacing(10)
-                        .foregroundColor(Color.primary.opacity(0.25))
-                        .padding(.top, 38)
-                        .padding(.horizontal, 45)
+                ZStack {
+                    if title.isEmpty{
+                        Text("뭘 잊고 싶으신가요?")
+                            .font(.custom(notoLight, size: 34))
+                            .foregroundColor(placeholderFontColor)
+                            .offset(x: -5, y:-15)
+                    }
+                    TextField("", text: $title)
+                        .font(.custom(notoLight, size: 34))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 30)
+                        .focused($isFocused)
                 }
             }
-            .onAppear(){
-                isNext = false
+            .padding(.horizontal, 20)
+        
+            //Description
+            Group{
+                Text("내용")
+                    .font(.custom(notoRegular, size: 12))
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .foregroundColor(.white)
+                
+                ZStack{
+                    if description.isEmpty{
+                        Text("무슨 일이 있었나요?")
+                            .font(.custom(notoLight, size: 34))
+                            .foregroundColor(placeholderFontColor)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .offset(y: -115)
+                    }
+                    TextEditor(text: $description)
+                        .font(.custom(notoLight, size: 34))
+                        .foregroundColor(.white)
+                        .offset(x: -5)
+                        .focused($isFocused)
+                }
+                .offset(y:-10)
+                .frame(maxWidth: .infinity,alignment: .leading)
             }
+            .padding(.horizontal, 20)
         }
-        .background()
-        .cornerRadius(30)
-        .padding(.bottom, 50)
+        .background(isFocused ? backgroundColor : Color.black)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(roundColor)
+        )
+        .frame(width: 330,height: 509)
     }
 }
 

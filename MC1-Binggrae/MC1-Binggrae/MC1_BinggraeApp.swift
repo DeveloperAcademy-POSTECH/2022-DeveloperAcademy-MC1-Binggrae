@@ -11,7 +11,11 @@ import SwiftUI
 struct MC1_BinggraeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //Main Page
+            IntroView()
+                .preferredColorScheme(.dark)
+//            CreateView()
+//                .preferredColorScheme(.dark)
         }
         
         // test 입니다. push test

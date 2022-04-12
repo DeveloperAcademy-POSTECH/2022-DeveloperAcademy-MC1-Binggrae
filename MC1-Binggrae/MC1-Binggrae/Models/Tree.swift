@@ -13,6 +13,9 @@ struct Tree: Codable, Hashable, Identifiable {
     var name: String
     var id: Int
     var time: Int
+    var flameColor: String
+    var asmrName: String
+    var asmrDescription: String
     var description: String
     
     private var imageName: String
