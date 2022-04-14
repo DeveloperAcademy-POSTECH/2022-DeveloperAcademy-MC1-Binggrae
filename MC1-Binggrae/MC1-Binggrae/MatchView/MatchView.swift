@@ -17,83 +17,34 @@ struct physics{
     static let box : UInt32 = 0b10
 }
 
-extension UIColor {
-
-    convenience init(red: Int, green: Int, blue: Int, a: Int = 0xFF) {
-
-        self.init(
-            red: CGFloat(red) / 255.0,
-            green: CGFloat(green) / 255.0,
-            blue: CGFloat(blue) / 255.0,
-            alpha: CGFloat(a) / 255.0
-        )
-
-    }
-
- 
-
-    convenience init(rgb: Int) {
-
-           self.init(
-               red: (rgb >> 16) & 0xFF,
-               green: (rgb >> 8) & 0xFF,
-               blue: rgb & 0xFF
-           )
-
-       }
-
-    
-
-    // let's suppose alpha is the first component (ARGB)
-
-    convenience init(argb: Int) {
-
-        self.init(
-            red: (argb >> 16) & 0xFF,
-            green: (argb >> 8) & 0xFF,
-            blue: argb & 0xFF,
-            a: (argb >> 24) & 0xFF
-        )
-    }
-}
-
-
 class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     let soundEff = SKAction.playSoundFileNamed("matchsound", waitForCompletion: false)
     var isFired: Bool = false
     @Published var touchButton: Bool = false
-
     
     
     private var currentNode: SKNode?
     var fireParticle : SKEmitterNode = SKEmitterNode()
     var message = SKLabelNode(fontNamed: "Noto Sans CJK KR")
     var messageBackground : SKShapeNode?
-   // var messageBackground = SKSpriteNode()
+    // var messageBackground = SKSpriteNode()
     var button = SKLabelNode(fontNamed: "Noto Sans CJK KR")
-
+    
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self // 충돌 감지 scene을 이 scene으로 설정
         backgroundColor = .black
-
+        
         message.text = "성냥을 그어 불을 붙여 보세요"
         message.zPosition = 6
         message.position = CGPoint(x: self.size.width / 2 , y: 60)
         message.fontSize = 14
         self.addChild(message)
-
+        
         messageBackground = SKShapeNode(rect: CGRect(x: self.size.width / 2 - 125, y: 60 - message.frame.size.height / 2 , width: 250, height: 25), cornerRadius: 12.5)
         messageBackground?.zPosition = 5
         messageBackground?.fillColor = UIColor(rgb: 0x141414)
         messageBackground?.lineWidth = 0.0
         self.addChild(messageBackground!)
-
-        
-//        messageBackground.color = UIColor(rgb: 0x141414)
-//        messageBackground.size = CGSize(width: message.frame.size.width + 1, height: message.frame.size.height + 2) //왜 삐져나오지?
-//        messageBackground.zPosition = 5
-//        messageBackground.position = CGPoint(x: self.size.width / 2 , y: self.size.height / 8 + message.frame.size.height / 2)
-//        self.addChild(messageBackground)
         
         button.text = "다음으로"
         button.name = "button"
@@ -115,7 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         match.physicsBody?.allowsRotation = false
         match.physicsBody?.usesPreciseCollisionDetection = true
         self.addChild(match)
-
+        
         let box = SKSpriteNode(imageNamed: "box")
         box.position = CGPoint(x:self.size.width / 8 + 100, y: self.size.height * 4/7 - 25)
         box.zPosition = 1
@@ -139,15 +90,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-       
+        
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-          firstBody = contact.bodyA
-          secondBody = contact.bodyB
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
         } else {
-          firstBody = contact.bodyB
-          secondBody = contact.bodyA
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
         }
         
         
@@ -166,7 +117,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { //첫인자: touch begin정보
         if let touch = touches.first {
             let location = touch.location(in: self)
-
+            
             let touchedNodes = self.nodes(at: location)
             for node in touchedNodes.reversed(){
                 if node.name == "match" {
@@ -175,11 +126,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
             }
         }
         for touch in touches.reversed() {
-             let location = touch.location(in: self)
-             let touchedNode = atPoint(location)
-             if touchedNode.name == "button" {
-                  sayHello()
-             }
+            let location = touch.location(in: self)
+            let touchedNode = atPoint(location)
+            if touchedNode.name == "button" {
+                sayHello()
+            }
             else if touchedNode.name == "match"{
                 self.currentNode = touchedNode
             }
@@ -191,15 +142,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.currentNode = nil
-
+        self.currentNode = nil
+        
     }
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.currentNode = nil
+        self.currentNode = nil
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
+        
         if let touch = touches.first, let node = self.currentNode {
             let touchLocation = touch.location(in: self)
             node.position.x = touchLocation.x - 58
@@ -222,12 +173,21 @@ struct MatchView: View {
         self._firewoodData = firewoodData
         scene.scaleMode = .resizeFill
     }
-
+    
     var body: some View {
-            ZStack{
-                SpriteView(scene:scene)
-//                    .fullScreenCover(isPresented: $scene.touchButton, content: Sample.init)
-            }.ignoresSafeArea()
+        ZStack{
+            SpriteView(scene:scene)
+                .fullScreenCover(isPresented: $scene.touchButton) {
+                    FirewoodView(
+                        asmrName:(firewoodData?.tree.asmrName)!,
+                        flameColor:(firewoodData?.tree.flameColor)!,
+                        imageName: (firewoodData?.tree.name)!,
+                        remainedTime:(firewoodData?.tree.time)!
+                    )
+                        .transition(.opacity)
+                        .opacity(scene.isFired ? 1 : 0)
+                }
+        }.ignoresSafeArea()
     }
 }
 

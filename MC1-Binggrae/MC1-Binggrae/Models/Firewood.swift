@@ -15,6 +15,6 @@ struct Firewood{
     var description: String?
     
     //Selected Tree
-    var tree: Tree?
+    var tree: Tree
 
 }

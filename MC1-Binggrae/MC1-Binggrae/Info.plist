@@ -4,6 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Black.ttf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Medium.ttf</string>
 		<string>NotoSansCJKkr-Black.otf</string>
 		<string>NotoSansCJKkr-Bold.otf</string>
 		<string>NotoSansCJKkr-DemiLight.otf</string>
@@ -13,6 +19,10 @@
 		<string>NotoSansCJKkr-Thin.otf</string>
 		<string>NotoSansMonoCJKkr-Bold.otf</string>
 		<string>NotoSansMonoCJKkr-Regular.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
 	</array>
 </dict>
 </plist>
