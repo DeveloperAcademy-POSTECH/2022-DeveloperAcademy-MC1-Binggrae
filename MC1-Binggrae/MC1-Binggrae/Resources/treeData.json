@@ -6,7 +6,7 @@
         "flameColor" : "red",
         "asmrName" : "flame01_asmr",
         "asmrDescription" : "편안",
-        "description" : "참나무는 진짜나무라는 뜻이다. 이용가치가 높은 고품질의 목재라는 뜻이다.",
+        "description" : "달콤한 꽃향기가 나는 등나무는 사람 사이의 갈등이라는 의미를 지니고 있다",
         "imageName" : "firewood01",
     },
     {
@@ -15,8 +15,8 @@
         "time" : 5,
         "flameColor" : "purple",
         "asmrName" : "flame02_asmr",
-        "asmrDescription" : "야외",
-        "description" : "참나무는 진짜나무라는 뜻이다. 이용가치가 높은 고품질의 목재라는 뜻이다.",
+        "asmrDescription" : "거침",
+        "description" : "우리나라를 대표하는 소나무는 곧은 마음과 절조의 의미를 지니고 있다",
         "imageName" : "firewood02",
     },
     {
@@ -25,8 +25,8 @@
         "time" : 15,
         "flameColor" : "blue",
         "asmrName" : "flame03_asmr",
-        "asmrDescription" : "잔잔",
-        "description" : "참나무는 진짜나무라는 뜻이다. 이용가치가 높은 고품질의 목재라는 뜻이다.",
+        "asmrDescription" : "따듯",
+        "description" : "단단한 떡갈나무는 영원한 사랑, 공명정대의 의미를 지니고 있다",
         "imageName" : "firewood03",
     },
 ]
