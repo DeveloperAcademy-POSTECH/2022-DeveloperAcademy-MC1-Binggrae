@@ -39,6 +39,7 @@
 		C682BAD62807FF1C000C7AEC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD52807FF1C000C7AEC /* Extensions.swift */; };
 		C682BAD82807FF78000C7AEC /* FirewoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD72807FF78000C7AEC /* FirewoodView.swift */; };
 		C682BADA2807FFD4000C7AEC /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD92807FFD4000C7AEC /* CustomAlertView.swift */; };
+		C682BAE928083635000C7AEC /* SelectionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAE828083635000C7AEC /* SelectionAlertView.swift */; };
 		C6C7AB2527FDE78300185AAB /* TextInputsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2427FDE78300185AAB /* TextInputsView.swift */; };
 		C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2827FE58D700185AAB /* XButtonView.swift */; };
 		C6C7AB2D27FE697B00185AAB /* treeData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6C7AB2C27FE697B00185AAB /* treeData.json */; };
@@ -108,6 +109,7 @@
 		C682BAE528080377000C7AEC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C682BAE628080377000C7AEC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		C682BAE728080377000C7AEC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		C682BAE828083635000C7AEC /* SelectionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionAlertView.swift; sourceTree = "<group>"; };
 		C6C7AB2427FDE78300185AAB /* TextInputsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputsView.swift; sourceTree = "<group>"; };
 		C6C7AB2827FE58D700185AAB /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
 		C6C7AB2C27FE697B00185AAB /* treeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeData.json; sourceTree = "<group>"; };
@@ -256,7 +258,6 @@
 		C6390D7027FD749B00671656 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6390D8827FD8A6D00671656 /* CreateView.swift */,
 				C682BAD32807EF8A000C7AEC /* IntroView.swift */,
 				C682BAC22805C408000C7AEC /* OutroView.swift */,
 			);
@@ -266,8 +267,10 @@
 		C6390D8427FD7A1500671656 /* CreateView */ = {
 			isa = PBXGroup;
 			children = (
+				C6390D8827FD8A6D00671656 /* CreateView.swift */,
 				C6C7AB2427FDE78300185AAB /* TextInputsView.swift */,
 				C682BACA2805CADD000C7AEC /* CardsTitleView.swift */,
+				C682BAE828083635000C7AEC /* SelectionAlertView.swift */,
 				C682BACC2805CAE8000C7AEC /* InputsTitleView.swift */,
 				C6C7AB2827FE58D700185AAB /* XButtonView.swift */,
 			);
@@ -476,6 +479,7 @@
 				C682BAD128072439000C7AEC /* ScrollingHStackModifier.swift in Sources */,
 				C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */,
 				C60D86F62803F49E00B38F62 /* AudioManager.swift in Sources */,
+				C682BAE928083635000C7AEC /* SelectionAlertView.swift in Sources */,
 				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,
 				C6C7AB2527FDE78300185AAB /* TextInputsView.swift in Sources */,
 				C682BADA2807FFD4000C7AEC /* CustomAlertView.swift in Sources */,

@@ -190,10 +190,3 @@ struct MatchView: View {
         }.ignoresSafeArea()
     }
 }
-
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MatchView()
-//    }
-//}
