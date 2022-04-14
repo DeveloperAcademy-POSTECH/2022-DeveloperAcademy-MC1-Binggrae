@@ -48,6 +48,7 @@ struct CustomAlertView: View {
                             Text("취소")
                                 .font(.custom("NotoSansCJKkr-light", size: 15))
                                 .foregroundColor(.white)
+                                .frame(width: 154, height: 50)
                         }.frame(width: 154, height: 50)
                             .offset(x:10)
                         
@@ -62,6 +63,7 @@ struct CustomAlertView: View {
                             Text("확인")
                                 .font(.custom("NotoSansCJKkr-Regular", size: 15))
                                 .foregroundColor(.white)
+                                .frame(width: 154, height: 50)
                         }
                         .frame(width: 154, height: 50)
                         .offset(x:-10)
