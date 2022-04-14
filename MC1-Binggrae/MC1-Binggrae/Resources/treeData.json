@@ -1,7 +1,7 @@
 [
     {
         "name" : "등나무",
-        "id" : 1001,
+        "id" : 1,
         "time" : 3,
         "flameColor" : "red",
         "asmrName" : "flame01_asmr",
@@ -11,7 +11,7 @@
     },
     {
         "name" : "소나무",
-        "id" : 1002,
+        "id" : 2,
         "time" : 5,
         "flameColor" : "purple",
         "asmrName" : "flame02_asmr",
@@ -21,7 +21,7 @@
     },
     {
         "name" : "떡갈나무",
-        "id" : 1003,
+        "id" : 3,
         "time" : 15,
         "flameColor" : "blue",
         "asmrName" : "flame03_asmr",

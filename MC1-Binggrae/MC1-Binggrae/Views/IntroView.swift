@@ -17,23 +17,20 @@ struct IntroView: View {
     @State private var isAppear2 = false
     @State private var isAppear3 = false
     @State private var isAppear4 = false
-    //    @State private var isAppear5 = false
+    
+    
     @State private var isPresented = false
     
     @State private var fadeInOut = false
-    
-//    init(){
-//        self.isAppear1 = true
-//    }
     
     
     var body: some View {
         ZStack{
             VStack{
                 Spacer()
-                Image("logo_png")
+                Image("logo")
                 Spacer()
-                Text("MUNG는 이어폰 사용을 권장합니다.")
+                Text("불멍화음은 이어폰 사용을 권장합니다.")
                     .tracking(-0.54)
                     .padding()
                     .font(.system(size: 14).weight(.ultraLight))
@@ -53,15 +50,12 @@ struct IntroView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     isAppear4.toggle()
                 }
-                //                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                //                        isAppear5.toggle()
                 
             }
             
             
             VStack{
                 Spacer()
-                
                 
                 Group {
                     HStack {
@@ -98,26 +92,30 @@ struct IntroView: View {
                 Spacer()
                 
                 HStack {
-                    Spacer()
-                    //버튼
-                    Text("시작하기")
+                    Text("화면을 터치하세요")
                         .opacity(isAppear4 ? 1 : 0)
                         .animation(.easeIn(duration: 0.8))
                         .font(.system(size: 14).weight(.ultraLight))
-                    Image("arrow")
-                        .opacity(isAppear4 ? 1 : 0)
-                        .animation(.easeIn(duration: 0.8))
+                        .padding([.bottom], 10.0)
                     
-                }.padding([.leading, .trailing], 20)
-                    .onTapGesture {
-                        isPresented.toggle()
-                    }.fullScreenCover(isPresented: $isPresented, content: CreateView.init)
-                    .onAppear(){
+                }.onAppear(){
                         withAnimation(Animation.easeInOut(duration: 0.9).repeatForever(autoreverses: true)){
                             fadeInOut.toggle()
                         }
                     }.opacity(fadeInOut ? 0.1 : 1)
             }
+            
+
+            Button {
+                isPresented.toggle()
+            } label: {
+                Text("")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+            }.opacity(isAppear4 ? 1 : 0)
+                .fullScreenCover(isPresented: $isPresented, content: CreateView.init)
+            
+            
         }
     }
 }

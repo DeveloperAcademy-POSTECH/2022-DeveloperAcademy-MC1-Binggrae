@@ -14,8 +14,6 @@ struct MC1_BinggraeApp: App {
             //Main Page
             IntroView()
                 .preferredColorScheme(.dark)
-//            CreateView()
-//                .preferredColorScheme(.dark)
         }
         
         // test 입니다. push test

@@ -19,8 +19,8 @@ struct OutroView: View {
     @State private var isAppear2 = false
     @State private var isAppear3 = false
     
-    
-    
+    let notoRegular = "NotoSansCJKkr-Regular"
+
     var body: some View {
         
         VStack {
@@ -62,14 +62,19 @@ struct OutroView: View {
             
             Spacer()
             
-            Text("종료하기")
-                .opacity(isAppear3 ? 1 : 0)
-                .animation(.easeIn(duration: 1))
-                .font(.system(size: 18).weight(.bold))
-                .onTapGesture {
-                    isPresented.toggle()
-                }.fullScreenCover(isPresented: $isPresented, content: IntroView.init)
-            
+            //종료하기 Button
+            Button {
+                isPresented.toggle()
+            } label: {
+                Text("종료하기")
+                    .foregroundColor(.white)
+                    .tracking(-0.5)
+                    .font(.custom(notoRegular, size: 18))
+                    .frame(width: 200, height: 70)
+                    
+            }.opacity(isAppear3 ? 1 : 0)
+                .padding([.bottom], 10.0)
+                .fullScreenCover(isPresented: $isPresented, content: IntroView.init)
         }
         
     }
@@ -78,5 +83,6 @@ struct OutroView: View {
 struct endView_Previews: PreviewProvider {
     static var previews: some View {
         OutroView()
+            .preferredColorScheme(.dark)
     }
 }

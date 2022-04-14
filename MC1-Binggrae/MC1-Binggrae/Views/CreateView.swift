@@ -17,11 +17,16 @@ struct CreateView: View {
     @State private var firewoodData: Firewood?
     @State var currentPageIndex: CGFloat = 2
     
+    let isRegular = false
+    let totalTree = trees.count
+    
+    //Fonts
     let notoThin = "NotoSansCJKkr-Thin"
     let notoLight = "NotoSansCJKkr-Light"
     let notoRegular = "NotoSansCJKkr-Regular"
     let notoMedium = "NotoSansCJKkr-Medium"
 
+    //Colors
     let buttonFontColor = Color(red: 63 / 255, green: 63 / 255, blue: 63 / 255)
 
     //init
@@ -36,42 +41,42 @@ struct CreateView: View {
             VStack{
                 
                 //1 장작을 선택하세요
-                HStack{
-                    let one = Text("1").font(.custom(notoThin, size: 54))
-
-                    Text("\(one)  장작을 선택하세요")
-                        .font(.custom(notoLight, size: 18))
-                    Spacer()
-                }
-                .padding(.top,140)
-
+                CardsTitleView()
                 
                 //Tree Cards
-                TabView{
+                HStack{
                     ForEach(trees, id:\.self){
-
                         tree in
 
-                        Button{
-                            selectedTree = tree
-                        } label: {
-                            
-                            let isSelected: Bool = selectedTree?.name == tree.name
-                            
-                            let imageName: String = isSelected ? "\(tree.name)_deactive" : "\(tree.name)_active"
-                            
-                            Image(imageName)
-                                .resizable()
-                                .frame(width: 310, height: 359)
-                        }
-                        
+                        let isSelected: Bool = selectedTree?.name == tree.name
+                        let imageName: String = isSelected ? "\(tree.name)_deactive" : "\(tree.name)_active"
+
+                        Image(imageName)
+                            .resizable()
+                            .frame(width: 310, height: 359)
+                            .onTapGesture {
+                                selectedTree = tree
+                            }
                     }
-                    .padding(.bottom, 64)
-                    
+                    .modifier(ScrollingHStackModifier(items: 3, itemWidth: 310, itemSpacing: 4, currentPageIndex: $currentPageIndex))
                 }
-                .frame(width: 310, height: 423)
-                .tabViewStyle(.page)
-            
+                .frame(width: 310, height: 359)
+                .padding(.top, -20)
+
+                //Indicator
+                HStack{
+                    ForEach(0..<totalTree){
+                        i in
+                        Circle()
+                            .fill(currentPageIndex == CGFloat(i) ? Color.white : Color.gray)
+                            .frame(width: 4, height: 4)
+                            .padding(4)
+                    }
+                }
+                .padding(.top,30)
+                .environment(\.layoutDirection, isRegular ? .leftToRight : .rightToLeft)
+
+      
                 //2 장작과 함께 태울 것을 적어보세요
                 HStack{
                     let two = Text("2").font(.custom(notoThin, size: 54))
@@ -82,39 +87,35 @@ struct CreateView: View {
                 }
                 
                 //Text Inputs
-                TextInputView(title: $title, description: $description)
+                TextInputsView(title: $title, description: $description)
+                    .padding(.top, -20)
                 
                 //태우기 Button
                 Button {
                     let tree: Tree? = selectedTree
                     firewoodData = Firewood(title: title, description: description, tree: tree)
                     isPresenting.toggle()
-                    
                 } label: {
 
                     Text("태우기")
                         .foregroundColor(Color.white)
                         .font(.custom(notoMedium, size: 18))
                         .kerning(5)
-                        .frame(height: 60)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, 10)
-                        
+                        .frame(width: 200, height: 70)
                 }
                 .fullScreenCover(isPresented: $isPresenting, content: {
 //                FirewoodView(firewoodData: $firewoodData)
                 })
                 .padding(.top, 30)
+                .padding(.bottom, 10)
             }
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 30)
         }
-
-            
     }
-    
 }
 
+//Preview
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
         //View
@@ -122,16 +123,3 @@ struct CreateView_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
-
-
-//                HStack{
-//                    ForEach(trees){
-//                        tree in
-////
-////                        Image("\(tree.name)_active")
-////                            .resizable()
-////                            .frame(width: 310, height: 359)
-//                    }
-//                }
-//                .modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 10, currentPageIndex: $currentPageIndex))
-                
