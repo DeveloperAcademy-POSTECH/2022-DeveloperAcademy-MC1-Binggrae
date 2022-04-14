@@ -103,8 +103,11 @@ struct CreateView: View {
                         .kerning(5)
                         .frame(width: 200, height: 70)
                 }
+
                 .fullScreenCover(isPresented: $isPresenting, content: {
-//                FirewoodView(firewoodData: $firewoodData)
+                    //성냥 긋기
+                    MatchView(firewoodData: $firewoodData)
+                    //FirewoodView(firewoodData: $firewoodData)
                 })
                 .padding(.top, 30)
                 .padding(.bottom, 10)
