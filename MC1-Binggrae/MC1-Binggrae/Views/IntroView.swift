@@ -28,7 +28,7 @@ struct IntroView: View {
         ZStack{
             VStack{
                 Spacer()
-                Image("logo")
+                Image("logo_png")
                 Spacer()
                 Text("불멍화음은 이어폰 사용을 권장합니다.")
                     .tracking(-0.54)
@@ -36,7 +36,7 @@ struct IntroView: View {
                     .font(.system(size: 14).weight(.ultraLight))
             }
             .opacity(isAppear1 ? 1 : 0)
-            .animation(.easeInOut(duration: 1))
+            .animation(.easeInOut(duration: 1), value: isAppear1)
             .onAppear(){
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     isAppear1.toggle()
@@ -62,7 +62,7 @@ struct IntroView: View {
                         Text("오늘 하루,")
                             .tracking(-2.4)
                             .opacity(isAppear2 ? 1 : 0)
-                            .animation(.easeIn(duration: 0.8))
+                            .animation(.easeIn(duration: 0.8), value: isAppear2)
                             .font(.system(size: 60).weight(.ultraLight))
                         
                         Spacer()
@@ -72,7 +72,7 @@ struct IntroView: View {
                         Text("쉬어가는")
                             .tracking(-2.4)
                             .opacity(isAppear3 ? 1 : 0)
-                            .animation(.easeIn(duration: 0.8))
+                            .animation(.easeIn(duration: 0.8), value: isAppear3)
                             .font(.system(size: 60).weight(.ultraLight))
                         
                         Spacer()
@@ -82,7 +82,7 @@ struct IntroView: View {
                         Text("그 순간")
                             .tracking(-2.4)
                             .opacity(isAppear3 ? 1 : 0)
-                            .animation(.easeIn(duration: 0.8))
+                            .animation(.easeIn(duration: 0.8), value: isAppear3)
                             .font(.system(size: 60).weight(.ultraLight))
                         
                         Spacer()
@@ -94,7 +94,7 @@ struct IntroView: View {
                 HStack {
                     Text("화면을 터치하세요")
                         .opacity(isAppear4 ? 1 : 0)
-                        .animation(.easeIn(duration: 0.8))
+                        .animation(.easeIn(duration: 0.8), value: isAppear4)
                         .font(.system(size: 14).weight(.ultraLight))
                         .padding([.bottom], 10.0)
                     

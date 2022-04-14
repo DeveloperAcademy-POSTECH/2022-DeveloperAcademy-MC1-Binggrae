@@ -12,7 +12,6 @@ struct CreateView: View {
     @State private var title: String = ""
     @State private var description: String = ""
     @State private var selectedTree: Tree?
-    @State private var data: Firewood?
     @State private var isPresenting: Bool = false
     @State private var firewoodData: Firewood?
     @State var currentPageIndex: CGFloat = 2
@@ -92,8 +91,8 @@ struct CreateView: View {
                 
                 //태우기 Button
                 Button {
-                    let tree: Tree? = selectedTree
-                    firewoodData = Firewood(title: title, description: description, tree: tree)
+                    let tree = selectedTree
+                    firewoodData = Firewood(title: title, description: description, tree: tree!)
                     isPresenting.toggle()
                 } label: {
 

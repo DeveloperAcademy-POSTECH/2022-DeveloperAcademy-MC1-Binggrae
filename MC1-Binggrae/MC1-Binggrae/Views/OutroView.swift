@@ -12,7 +12,6 @@ struct OutroView: View {
     // 풀스크린커버 페이지 전환
     @Environment(\.presentationMode) var presentationMode
     
-    
     @State private var isPresented = false
     
     @State private var isAppear1 = false
@@ -32,7 +31,7 @@ struct OutroView: View {
                     Text("널 힘들게 했던\n모든 것들이 ")
                         .tracking(-2)
                         .opacity(isAppear1 ? 1 : 0)
-                        .animation(.easeIn(duration: 1))
+                        .animation(.easeIn(duration: 1), value: isAppear1)
                         .font(.system(size: 50).weight(.ultraLight))
                         .onAppear(){
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -53,7 +52,7 @@ struct OutroView: View {
                     Text("다 탔어.")
                         .tracking(-2)
                         .opacity(isAppear2 ? 1 : 0)
-                        .animation(.easeIn(duration: 1))
+                        .animation(.easeIn(duration: 1), value: isAppear2)
                         .font(.system(size: 50).weight(.regular))
                     Spacer()
                     

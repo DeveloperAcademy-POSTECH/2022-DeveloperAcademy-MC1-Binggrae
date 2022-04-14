@@ -11,7 +11,6 @@
 		AECBE7F72807F4B400BEC87A /* matchfire.sks in Resources */ = {isa = PBXBuildFile; fileRef = AECBE7F62807F4B400BEC87A /* matchfire.sks */; };
 		AECBE7F92807F4BA00BEC87A /* matchsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECBE7F82807F4BA00BEC87A /* matchsound.mp3 */; };
 		C60D86F12803F38900B38F62 /* FireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F02803F38900B38F62 /* FireView.swift */; };
-		C60D86F32803F39600B38F62 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F22803F39600B38F62 /* TimerPickerView.swift */; };
 		C60D86F62803F49E00B38F62 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D86F52803F49E00B38F62 /* AudioManager.swift */; };
 		C60D86F82803FE6500B38F62 /* firewood_asmr_30min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C60D86F72803FE6500B38F62 /* firewood_asmr_30min.mp3 */; };
 		C60D86FA2803FE7400B38F62 /* flame01_asmr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C60D86F92803FE7400B38F62 /* flame01_asmr.mp3 */; };
@@ -37,6 +36,9 @@
 		C682BACF2806B9D1000C7AEC /* flame02_asmr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C682BACE2806B9D1000C7AEC /* flame02_asmr.mp3 */; };
 		C682BAD128072439000C7AEC /* ScrollingHStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD028072439000C7AEC /* ScrollingHStackModifier.swift */; };
 		C682BAD42807EF8A000C7AEC /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD32807EF8A000C7AEC /* IntroView.swift */; };
+		C682BAD62807FF1C000C7AEC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD52807FF1C000C7AEC /* Extensions.swift */; };
+		C682BAD82807FF78000C7AEC /* FirewoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD72807FF78000C7AEC /* FirewoodView.swift */; };
+		C682BADA2807FFD4000C7AEC /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682BAD92807FFD4000C7AEC /* CustomAlertView.swift */; };
 		C6C7AB2527FDE78300185AAB /* TextInputsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2427FDE78300185AAB /* TextInputsView.swift */; };
 		C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7AB2827FE58D700185AAB /* XButtonView.swift */; };
 		C6C7AB2D27FE697B00185AAB /* treeData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6C7AB2C27FE697B00185AAB /* treeData.json */; };
@@ -68,7 +70,6 @@
 		AECBE7F62807F4B400BEC87A /* matchfire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = matchfire.sks; sourceTree = "<group>"; };
 		AECBE7F82807F4BA00BEC87A /* matchsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = matchsound.mp3; sourceTree = "<group>"; };
 		C60D86F02803F38900B38F62 /* FireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireView.swift; sourceTree = "<group>"; };
-		C60D86F22803F39600B38F62 /* TimerPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		C60D86F52803F49E00B38F62 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		C60D86F72803FE6500B38F62 /* firewood_asmr_30min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firewood_asmr_30min.mp3; sourceTree = "<group>"; };
 		C60D86F92803FE7400B38F62 /* flame01_asmr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flame01_asmr.mp3; sourceTree = "<group>"; };
@@ -98,6 +99,15 @@
 		C682BACE2806B9D1000C7AEC /* flame02_asmr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flame02_asmr.mp3; sourceTree = "<group>"; };
 		C682BAD028072439000C7AEC /* ScrollingHStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHStackModifier.swift; sourceTree = "<group>"; };
 		C682BAD32807EF8A000C7AEC /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		C682BAD52807FF1C000C7AEC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C682BAD72807FF78000C7AEC /* FirewoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewoodView.swift; sourceTree = "<group>"; };
+		C682BAD92807FFD4000C7AEC /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		C682BAE228080377000C7AEC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		C682BAE328080377000C7AEC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C682BAE428080377000C7AEC /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		C682BAE528080377000C7AEC /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C682BAE628080377000C7AEC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		C682BAE728080377000C7AEC /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		C6C7AB2427FDE78300185AAB /* TextInputsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputsView.swift; sourceTree = "<group>"; };
 		C6C7AB2827FE58D700185AAB /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
 		C6C7AB2C27FE697B00185AAB /* treeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = treeData.json; sourceTree = "<group>"; };
@@ -146,8 +156,9 @@
 		C60D86F42803F39B00B38F62 /* FirewoodView */ = {
 			isa = PBXGroup;
 			children = (
-				C60D86F22803F39600B38F62 /* TimerPickerView.swift */,
 				C60D86F02803F38900B38F62 /* FireView.swift */,
+				C682BAD72807FF78000C7AEC /* FirewoodView.swift */,
+				C682BAD92807FFD4000C7AEC /* CustomAlertView.swift */,
 			);
 			path = FirewoodView;
 			sourceTree = "<group>";
@@ -176,11 +187,11 @@
 		C6390D4327FD743400671656 /* MC1-Binggrae */ = {
 			isa = PBXGroup;
 			children = (
-				AECBE7F32807F3AA00BEC87A /* MatchView */,
 				C6390D8327FD74ED00671656 /* Info.plist */,
 				C6390D4427FD743400671656 /* MC1_BinggraeApp.swift */,
 				C6390D7027FD749B00671656 /* Views */,
 				C6390D8427FD7A1500671656 /* CreateView */,
+				AECBE7F32807F3AA00BEC87A /* MatchView */,
 				C60D86F42803F39B00B38F62 /* FirewoodView */,
 				C682BAD22807386D000C7AEC /* Modifier */,
 				C6390D8527FD7A3300671656 /* Models */,
@@ -223,6 +234,7 @@
 				C682BABF2805C29B000C7AEC /* soundtracks */,
 				C6390D6F27FD749200671656 /* fonts */,
 				C6C7AB2C27FE697B00185AAB /* treeData.json */,
+				C682BAD52807FF1C000C7AEC /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -230,15 +242,13 @@
 		C6390D6F27FD749200671656 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				C6390D7727FD74CB00671656 /* NotoSansCJKkr-Black.otf */,
-				C6390D7127FD74C900671656 /* NotoSansCJKkr-Bold.otf */,
-				C6390D7827FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf */,
-				C6390D7627FD74CB00671656 /* NotoSansCJKkr-Light.otf */,
-				C6390D7927FD74CC00671656 /* NotoSansCJKkr-Medium.otf */,
-				C6390D7227FD74C900671656 /* NotoSansCJKkr-Regular.otf */,
-				C6390D7527FD74CA00671656 /* NotoSansCJKkr-Thin.otf */,
-				C6390D7427FD74CA00671656 /* NotoSansMonoCJKkr-Bold.otf */,
-				C6390D7327FD74C900671656 /* NotoSansMonoCJKkr-Regular.otf */,
+				C682BAE428080377000C7AEC /* Roboto-Black.ttf */,
+				C682BAE528080377000C7AEC /* Roboto-Bold.ttf */,
+				C682BAE628080377000C7AEC /* Roboto-Light.ttf */,
+				C682BAE228080377000C7AEC /* Roboto-Medium.ttf */,
+				C682BAE328080377000C7AEC /* Roboto-Regular.ttf */,
+				C682BAE728080377000C7AEC /* Roboto-Thin.ttf */,
+				C682BADD28080070000C7AEC /* NotoSans */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -291,6 +301,22 @@
 				C682BAD028072439000C7AEC /* ScrollingHStackModifier.swift */,
 			);
 			path = Modifier;
+			sourceTree = "<group>";
+		};
+		C682BADD28080070000C7AEC /* NotoSans */ = {
+			isa = PBXGroup;
+			children = (
+				C6390D7727FD74CB00671656 /* NotoSansCJKkr-Black.otf */,
+				C6390D7127FD74C900671656 /* NotoSansCJKkr-Bold.otf */,
+				C6390D7827FD74CC00671656 /* NotoSansCJKkr-DemiLight.otf */,
+				C6390D7627FD74CB00671656 /* NotoSansCJKkr-Light.otf */,
+				C6390D7927FD74CC00671656 /* NotoSansCJKkr-Medium.otf */,
+				C6390D7227FD74C900671656 /* NotoSansCJKkr-Regular.otf */,
+				C6390D7527FD74CA00671656 /* NotoSansCJKkr-Thin.otf */,
+				C6390D7427FD74CA00671656 /* NotoSansMonoCJKkr-Bold.otf */,
+				C6390D7327FD74C900671656 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = NotoSans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +468,7 @@
 				C6C7AB3C27FEC3D800185AAB /* Firewood.swift in Sources */,
 				C682BACD2805CAE8000C7AEC /* InputsTitleView.swift in Sources */,
 				AECBE7F52807F3D300BEC87A /* MatchView.swift in Sources */,
+				C682BAD82807FF78000C7AEC /* FirewoodView.swift in Sources */,
 				C6C7AB3227FE6AEA00185AAB /* Tree.swift in Sources */,
 				C6390D8927FD8A6D00671656 /* CreateView.swift in Sources */,
 				C60D86F12803F38900B38F62 /* FireView.swift in Sources */,
@@ -449,10 +476,11 @@
 				C682BAD128072439000C7AEC /* ScrollingHStackModifier.swift in Sources */,
 				C6C7AB2927FE58D700185AAB /* XButtonView.swift in Sources */,
 				C60D86F62803F49E00B38F62 /* AudioManager.swift in Sources */,
-				C60D86F32803F39600B38F62 /* TimerPickerView.swift in Sources */,
 				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,
 				C6C7AB2527FDE78300185AAB /* TextInputsView.swift in Sources */,
+				C682BADA2807FFD4000C7AEC /* CustomAlertView.swift in Sources */,
 				C682BACB2805CADD000C7AEC /* CardsTitleView.swift in Sources */,
+				C682BAD62807FF1C000C7AEC /* Extensions.swift in Sources */,
 				C682BAC42805C408000C7AEC /* OutroView.swift in Sources */,
 				C6390D4527FD743400671656 /* MC1_BinggraeApp.swift in Sources */,
 			);
@@ -541,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -595,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -613,7 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 76AJ433CP5;
+				DEVELOPMENT_TEAM = 9R39BMBYFW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";
@@ -643,7 +671,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 76AJ433CP5;
+				DEVELOPMENT_TEAM = 9R39BMBYFW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";

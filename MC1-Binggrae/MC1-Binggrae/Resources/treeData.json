@@ -2,7 +2,7 @@
     {
         "name" : "등나무",
         "id" : 1,
-        "time" : 3,
+        "time" : 180,
         "flameColor" : "red",
         "asmrName" : "flame01_asmr",
         "asmrDescription" : "편안",
@@ -12,7 +12,7 @@
     {
         "name" : "소나무",
         "id" : 2,
-        "time" : 5,
+        "time" : 300,
         "flameColor" : "purple",
         "asmrName" : "flame02_asmr",
         "asmrDescription" : "거침",
@@ -22,7 +22,7 @@
     {
         "name" : "떡갈나무",
         "id" : 3,
-        "time" : 15,
+        "time" : 900,
         "flameColor" : "blue",
         "asmrName" : "flame03_asmr",
         "asmrDescription" : "따듯",
