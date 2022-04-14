@@ -38,6 +38,7 @@ struct SelectionAlertView: View {
                         } label: {
                             Text("돌아가기")
                                 .font(.custom("NotoSansCJKkr-Regular", size: 15))
+                                .frame(width: 310, height: 60)
                                 .foregroundColor(.white)
                         }
                         .frame(width: 154, height: 50)
@@ -49,10 +50,3 @@ struct SelectionAlertView: View {
         }
     }
 }
-//
-//struct SelectionAlertView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        SelectionAlertView()
-//    }
-//}
