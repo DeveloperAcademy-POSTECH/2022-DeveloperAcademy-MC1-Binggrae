@@ -17,6 +17,8 @@ struct CardsTitleView: View {
         
         //CardTitle
         HStack{
+            
+            //Define
             let one = Text("1").font(.custom(notoThin, size: 54))
 
             Text("\(one)  장작을 선택하세요")

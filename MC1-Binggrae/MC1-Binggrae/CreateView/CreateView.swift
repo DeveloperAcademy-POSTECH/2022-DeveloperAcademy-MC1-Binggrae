@@ -37,103 +37,102 @@ struct CreateView: View {
     //body
     var body: some View {
         
-        NavigationView{
-            ScrollView{
-                ZStack {
-                    VStack{
-                        
-                        //1 장작을 선택하세요
-                        CardsTitleView()
-                        
-                        //Tree Cards
-                        HStack{
-                            ForEach(trees, id:\.self){
-                                tree in
-
-                                let isSelected: Bool = selectedTree?.name == tree.name
-                                let imageName: String = isSelected ? "\(tree.name)_deactive" : "\(tree.name)_active"
-
-                                Image(imageName)
-                                    .resizable()
-                                    .frame(width: 310, height: 359)
-                                    .onTapGesture {
-                                        selectedTree = tree
-                                    }
-                            }
-                            .modifier(ScrollingHStackModifier(items: 3, itemWidth: 310, itemSpacing: 4, currentPageIndex: $currentPageIndex))
-                        }
-                        .frame(width: 310, height: 359)
-                        .padding(.top, -20)
-
-                        //Indicator
-                        HStack{
-                            ForEach(0..<totalTree){
-                                i in
-                                Circle()
-                                    .fill(currentPageIndex == CGFloat(i) ? Color.white : Color.gray)
-                                    .frame(width: 4, height: 4)
-                                    .padding(4)
-                            }
-                        }
-                        .padding(.top,30)
-                        .environment(\.layoutDirection, isRegular ? .leftToRight : .rightToLeft)
-
-              
-                        //2 장작과 함께 태울 것을 적어보세요
-                        HStack{
-                            let two = Text("2").font(.custom(notoThin, size: 54))
-
-                            Text("\(two)  장작과 함께 태울 것을 적어보세요")
-                                .font(.custom(notoLight, size: 18))
-                            Spacer()
-                        }
-                        
-                        //Text Inputs
-                        TextInputsView(title: $title, description: $description)
-                            .padding(.top, -20)
-                        
-                        //태우기 Button
-                        Button {
-                            let tree = selectedTree
-                            if selectedTree != nil {
-                                firewoodData = Firewood(title: title, description: description, tree: tree!)
-                                isPresenting.toggle()
-                            } else {
-                                isShowing = true
-                            }
-                        } label: {
-
-                            Text("태우기")
-                                .foregroundColor(Color.white)
-                                .font(.custom(notoMedium, size: 18))
-                                .kerning(5)
-                                .frame(width: 200, height: 70)
-                        }
-                        .fullScreenCover(isPresented: $isPresenting, content: {
-                            
-                            //MatchView
-                            if selectedTree != nil {
-                                MatchView(firewoodData: $firewoodData)
-                            }
-                            
-                        })
-                        .padding(.top, 30)
-                        .padding(.bottom, 10)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 30)
-                    .opacity(isShowing ? 0.3 : 1)
+    
+        ScrollView{
+            ZStack {
+                VStack{
                     
-                    //SelectionAlertView
-                    SelectionAlertView(isShowing: $isShowing)
-                        .frame(width: 320, height: 240)
-                        .offset(y: 320)
+                    //1 장작을 선택하세요
+                    CardsTitleView()
+                    
+                    //Tree Cards
+                    HStack{
+                        ForEach(trees, id:\.self){
+                            tree in
+
+                            let isSelected: Bool = selectedTree?.name == tree.name
+                            let imageName: String = isSelected ? "\(tree.name)_deactive" : "\(tree.name)_active"
+
+                            Image(imageName)
+                                .resizable()
+                                .frame(width: 310, height: 359)
+                                .onTapGesture {
+                                    selectedTree = tree
+                                }
+                        }
+                        .modifier(ScrollingHStackModifier(items: 3, itemWidth: 310, itemSpacing: 4, currentPageIndex: $currentPageIndex))
+                    }
+                    .frame(width: 310, height: 359)
+                    .padding(.top, -20)
+
+                    //Indicator
+                    HStack{
+                        ForEach(0..<totalTree){
+                            i in
+                            Circle()
+                                .fill(currentPageIndex == CGFloat(i) ? Color.white : Color.gray)
+                                .frame(width: 4, height: 4)
+                                .padding(4)
+                        }
+                    }
+                    .padding(.top,30)
+                    .environment(\.layoutDirection, isRegular ? .leftToRight : .rightToLeft)
+          
+                    //2 장작과 함께 태울 것을 적어보세요
+                    HStack{
+                        let two = Text("2").font(.custom(notoThin, size: 54))
+
+                        Text("\(two)  장작과 함께 태울 것을 적어보세요")
+                            .font(.custom(notoLight, size: 18))
+                        Spacer()
+                    }
+                    
+                    //Text Inputs
+                    TextInputsView(title: $title, description: $description)
+                        .padding(.top, -20)
+                    
+                    //태우기 Button
+                    Button {
+                        let tree = selectedTree
+                        if selectedTree != nil {
+                            firewoodData = Firewood(title: title, description: description, tree: tree!)
+                            isPresenting.toggle()
+                        } else {
+                            isShowing = true
+                        }
+                    } label: {
+
+                        Text("태우기")
+                            .foregroundColor(Color.white)
+                            .font(.custom(notoMedium, size: 18))
+                            .kerning(5)
+                            .frame(width: 200, height: 70)
+                    }
+                    .fullScreenCover(isPresented: $isPresenting, content: {
+                        
+                        //MatchView
+                        if selectedTree != nil {
+                            MatchView(firewoodData: $firewoodData)
+                        }
+                        
+                    })
+                    .padding(.top, 30)
+                    .padding(.bottom, 10)
                 }
-            }
-            .onTapGesture {
-                hideKeyboard()
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 30)
+                .opacity(isShowing ? 0.3 : 1)
+                
+                //SelectionAlertView
+                SelectionAlertView(isShowing: $isShowing)
+                    .frame(width: 320, height: 240)
+                    .offset(y: 320)
             }
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
+        
     }
 }
 

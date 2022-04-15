@@ -19,7 +19,6 @@ struct TextInputsView: View {
     let backgroundColor = Color(red: 27 / 255, green: 27 / 255, blue: 27 / 255)
     @FocusState private var isFocused: Bool
 
-    
     //body
     var body: some View {
         VStack{
