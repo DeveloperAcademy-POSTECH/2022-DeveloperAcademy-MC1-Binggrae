@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  MC1-Binggrae
+
+  Created by LeeJaehoon on 2022/04/16.
+  
+*/
+
+// IntroView
+"use airpods" = "Bulmeong recommends using earphones.";
+"intro title 1" = "Today,";
+"intro title 2" = "the moment";
+"intro title 3" = "I take a break";
+"touch the screen" = "Touch the screen";
+
+// OutroView
+"outro title 1" = "Everything\nthat gave you a hard time";
+"outro title 2" = "became ashes"; // became ashes ? was burnt ?
+"exit" = "Quit";
+
+
+// CreateView
+// - CreateView
+"%@  create view text1" = "%@  Write down what to burn with the firewood";
+"create view text2" = "Burn";
+
+// - TextInputsView
+"input view title 1" = "Title";
+"input view title 2" = "What do you want to forget?";
+"input view title 3" = "content";
+"input view title 4" = "What happened?";
+
+// - CardInputsView
+"%@  card inputs view text1" = "%@  Choose your firewood";
+
+// - SelectionAlertView
+"SelectionAlertView.chooseWood" = "Please select firewood";
+"SelectionAlertView.backButton" = "Back";
+
+
+//MatchView
+"MatchView.Light a match" = "Try to strike a match and light it";
+"MatchView.next button" = "Next";
+
+
+//FirewoodViews
+// - FirewoodView
+"FirewoodView.cancel" = "Stop";
+"FirewoodView.restart" = "Touch the screen to start burning";
+"FirewoodView.minutes" = "m      ";
+"FirewoodView.seconds" = "s   ";
+
+
+// - CustomAlertView
+"CustomAlertView.cancelQ" = "Are you sure you want to stop?";
+"CustomAlertView.message1" = "Click OK";
+"CustomAlertView.message2" = "to go to the last screen.";
+"CustomAlertView.cancelButton" = "Cancel";
+"CustomAlertView.confirmButton" = "OK";

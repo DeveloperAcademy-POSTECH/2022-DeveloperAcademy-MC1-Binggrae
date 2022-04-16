@@ -30,6 +30,12 @@ struct FirewoodView: View {
     @State var audioManager: AudioManager?
 //    var audioManager = AudioManager(name:$asmrNAme)
     
+    
+    private let firewoodViewText1: LocalizedStringKey = "FirewoodView.cancel"
+    private let firewoodViewText2: LocalizedStringKey = "FirewoodView.restart"
+    private let firewoodViewText3: LocalizedStringKey = "FirewoodView.minutes"
+    private let firewoodViewText4: LocalizedStringKey = "FirewoodView.seconds"
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -83,7 +89,7 @@ struct FirewoodView: View {
                             }
                             
                         } label: {
-                            var text = self.isPlaying ? "중단하기" : "태우기를 시작하려면 화면을 터치하세요"
+                            var text = self.isPlaying ? firewoodViewText1.toString() : firewoodViewText2.toString()
                             Text(text)
                                 .fontWeight(.bold)
                                 .font(.custom("NotoSansCJKkr-Light", size: 18))
@@ -92,7 +98,7 @@ struct FirewoodView: View {
                                 .cornerRadius(15)
                                 .onReceive(timer) { _ in
                                     if remainedTime == 0 || !isPlaying {
-                                        text = "태우기를 시작하려면 화면을 터치하세요"
+                                        text = firewoodViewText2.toString()
                                         stopTimer()
                                     }
                                 }
@@ -155,9 +161,9 @@ struct FirewoodView: View {
         
         
         timeAttributedString.addAttributes(bold, range: NSRange(location: 0, length: 2))
-        timeAttributedString.append(NSAttributedString(string: "분      ", attributes: info))
+        timeAttributedString.append(NSAttributedString(string: firewoodViewText3.toString(), attributes: info))
         timeAttributedString.append(NSAttributedString(string: "\(seconds)",attributes: bold))
-        timeAttributedString.append(NSAttributedString(string: "초   ", attributes: info))
+        timeAttributedString.append(NSAttributedString(string: firewoodViewText4.toString(), attributes: info))
         
         return timeAttributedString
     }

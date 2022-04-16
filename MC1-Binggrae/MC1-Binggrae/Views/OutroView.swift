@@ -20,6 +20,11 @@ struct OutroView: View {
     
     let notoRegular = "NotoSansCJKkr-Regular"
 
+    // 언어별 text
+    private let outroText1: LocalizedStringKey = "outro title 1"
+    private let outroText2: LocalizedStringKey = "outro title 2"
+    private let outroText3: LocalizedStringKey = "exit"
+    
     var body: some View {
         
         VStack {
@@ -28,7 +33,7 @@ struct OutroView: View {
             
             Group {
                 HStack {
-                    Text("널 힘들게 했던\n모든 것들이 ")
+                    Text(outroText1)
                         .tracking(-2)
                         .opacity(isAppear1 ? 1 : 0)
                         .animation(.easeIn(duration: 1), value: isAppear1)
@@ -49,7 +54,7 @@ struct OutroView: View {
                 }.padding([.bottom])
                 
                 HStack {
-                    Text("다 탔어.")
+                    Text(outroText2)
                         .tracking(-2)
                         .opacity(isAppear2 ? 1 : 0)
                         .animation(.easeIn(duration: 1), value: isAppear2)
@@ -65,7 +70,7 @@ struct OutroView: View {
             Button {
                 isPresented.toggle()
             } label: {
-                Text("종료하기")
+                Text(outroText3)
                     .foregroundColor(.white)
                     .tracking(-0.5)
                     .font(.custom(notoRegular, size: 18))

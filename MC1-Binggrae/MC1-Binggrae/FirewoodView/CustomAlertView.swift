@@ -20,14 +20,14 @@ struct CustomAlertView: View {
                         .frame(height: 60)
                     
                     VStack {
-                        Text("중단하시겠습니까?")
+                        Text("CustomAlertView.cancelQ")
                             .font(.custom("NotoSansCJKkr-Regular", size: 20))
                             .foregroundColor(.white)
                         Spacer().frame(height: 10)
-                        Text("확인을 누르시면")
+                        Text("CustomAlertView.message1")
                             .font(.custom("NotoSansCJKkr-light", size: 14))
                             .foregroundColor(.init(red: 138/255.0, green: 138/255.0, blue: 138/255.0))
-                        Text("마지막 화면으로 이동합니다")
+                        Text("CustomAlertView.message2")
                             .font(.custom("NotoSansCJKkr-light", size: 14))
                             .foregroundColor(.init(red: 138/255.0, green: 138/255.0, blue: 138/255.0))
                     }.frame(width: 310, height: 77)
@@ -45,7 +45,7 @@ struct CustomAlertView: View {
                             print("취소")
                             isShowing = false
                         } label: {
-                            Text("취소")
+                            Text("CustomAlertView.cancelButton")
                                 .font(.custom("NotoSansCJKkr-light", size: 15))
                                 .foregroundColor(.white)
                                 .frame(width: 154, height: 50)
@@ -60,7 +60,7 @@ struct CustomAlertView: View {
                             isNext = true
                             isShowing.toggle()
                         } label: {
-                            Text("확인")
+                            Text("CustomAlertView.confirmButton")
                                 .font(.custom("NotoSansCJKkr-Regular", size: 15))
                                 .foregroundColor(.white)
                                 .frame(width: 154, height: 50)

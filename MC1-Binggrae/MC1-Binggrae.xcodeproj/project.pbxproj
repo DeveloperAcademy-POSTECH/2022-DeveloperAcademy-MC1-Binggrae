@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0942ED38280A5DF600B5B0EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0942ED3A280A5DF600B5B0EC /* Localizable.strings */; };
+		0942ED3E280A5FE300B5B0EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0942ED40280A5FE300B5B0EC /* InfoPlist.strings */; };
+		0942ED45280A7C7C00B5B0EC /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942ED44280A7C7C00B5B0EC /* LocalizedStringKey.swift */; };
 		AECBE7F52807F3D300BEC87A /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECBE7F42807F3D300BEC87A /* MatchView.swift */; };
 		AECBE7F72807F4B400BEC87A /* matchfire.sks in Resources */ = {isa = PBXBuildFile; fileRef = AECBE7F62807F4B400BEC87A /* matchfire.sks */; };
 		AECBE7F92807F4BA00BEC87A /* matchsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AECBE7F82807F4BA00BEC87A /* matchsound.mp3 */; };
@@ -67,6 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0942ED39280A5DF600B5B0EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0942ED3B280A5E0000B5B0EC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0942ED3F280A5FE300B5B0EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0942ED41280A5FE700B5B0EC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0942ED44280A7C7C00B5B0EC /* LocalizedStringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
 		AECBE7F42807F3D300BEC87A /* MatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		AECBE7F62807F4B400BEC87A /* matchfire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = matchfire.sks; sourceTree = "<group>"; };
 		AECBE7F82807F4BA00BEC87A /* matchsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = matchsound.mp3; sourceTree = "<group>"; };
@@ -200,6 +208,8 @@
 				C6390D6E27FD748200671656 /* Resources */,
 				C6390D4A27FD743600671656 /* Preview Content */,
 				C6390D4827FD743600671656 /* Assets.xcassets */,
+				0942ED3A280A5DF600B5B0EC /* Localizable.strings */,
+				0942ED40280A5FE300B5B0EC /* InfoPlist.strings */,
 			);
 			path = "MC1-Binggrae";
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				C682BAD028072439000C7AEC /* ScrollingHStackModifier.swift */,
+				0942ED44280A7C7C00B5B0EC /* LocalizedStringKey.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -407,6 +418,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ko,
 				Base,
 			);
 			mainGroup = C6390D3827FD743400671656;
@@ -436,11 +448,13 @@
 				C6390D7B27FD74CC00671656 /* NotoSansCJKkr-Regular.otf in Resources */,
 				C6390D4927FD743600671656 /* Assets.xcassets in Resources */,
 				C6390D7F27FD74CC00671656 /* NotoSansCJKkr-Light.otf in Resources */,
+				0942ED3E280A5FE300B5B0EC /* InfoPlist.strings in Resources */,
 				C6390D8227FD74CC00671656 /* NotoSansCJKkr-Medium.otf in Resources */,
 				C60D86FA2803FE7400B38F62 /* flame01_asmr.mp3 in Resources */,
 				C6390D7A27FD74CC00671656 /* NotoSansCJKkr-Bold.otf in Resources */,
 				C6390D7C27FD74CC00671656 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				C682BACF2806B9D1000C7AEC /* flame02_asmr.mp3 in Resources */,
+				0942ED38280A5DF600B5B0EC /* Localizable.strings in Resources */,
 				AECBE7F92807F4BA00BEC87A /* matchsound.mp3 in Resources */,
 				AECBE7F72807F4B400BEC87A /* matchfire.sks in Resources */,
 			);
@@ -482,6 +496,7 @@
 				C682BAE928083635000C7AEC /* SelectionAlertView.swift in Sources */,
 				C6C7AB3427FE6C5400185AAB /* ModelData.swift in Sources */,
 				C6C7AB2527FDE78300185AAB /* TextInputsView.swift in Sources */,
+				0942ED45280A7C7C00B5B0EC /* LocalizedStringKey.swift in Sources */,
 				C682BADA2807FFD4000C7AEC /* CustomAlertView.swift in Sources */,
 				C682BACB2805CADD000C7AEC /* CardsTitleView.swift in Sources */,
 				C682BAD62807FF1C000C7AEC /* Extensions.swift in Sources */,
@@ -522,11 +537,33 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		0942ED3A280A5DF600B5B0EC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0942ED39280A5DF600B5B0EC /* en */,
+				0942ED3B280A5E0000B5B0EC /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0942ED40280A5FE300B5B0EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0942ED3F280A5FE300B5B0EC /* en */,
+				0942ED41280A5FE700B5B0EC /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		C6390D6327FD743600671656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -587,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -645,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 76AJ433CP5;
+				DEVELOPMENT_TEAM = 44CVK5WU2L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";
@@ -659,7 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kim.MC1-Binggrae";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kim.MC1Binggrae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -675,7 +713,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 76AJ433CP5;
+				DEVELOPMENT_TEAM = 44CVK5WU2L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";
@@ -689,7 +727,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kim.MC1-Binggrae";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kim.MC1Binggrae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

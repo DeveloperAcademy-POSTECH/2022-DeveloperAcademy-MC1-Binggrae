@@ -29,6 +29,8 @@ struct CreateView: View {
     //Colors
     let buttonFontColor = Color(red: 63 / 255, green: 63 / 255, blue: 63 / 255)
 
+    private let createViewText1: LocalizedStringKey = "create view text 1"
+    
     //init
     init() {
             UITextView.appearance().backgroundColor = .clear
@@ -82,7 +84,7 @@ struct CreateView: View {
                     HStack{
                         let two = Text("2").font(.custom(notoThin, size: 54))
 
-                        Text("\(two)  장작과 함께 태울 것을 적어보세요")
+                        Text("\(two)  create view text1")
                             .font(.custom(notoLight, size: 18))
                         Spacer()
                     }
@@ -102,7 +104,7 @@ struct CreateView: View {
                         }
                     } label: {
 
-                        Text("태우기")
+                        Text("create view text2")
                             .foregroundColor(Color.white)
                             .font(.custom(notoMedium, size: 18))
                             .kerning(5)

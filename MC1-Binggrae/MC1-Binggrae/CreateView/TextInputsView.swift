@@ -18,14 +18,19 @@ struct TextInputsView: View {
     let roundColor = Color(red: 58 / 255, green: 58 / 255, blue: 58 / 255)
     let backgroundColor = Color(red: 27 / 255, green: 27 / 255, blue: 27 / 255)
     @FocusState private var isFocused: Bool
-
+    
+    private let inputsViewText1: LocalizedStringKey = "input view title 1"
+    private let inputsViewText2: LocalizedStringKey = "input view title 2"
+    private let inputsViewText3: LocalizedStringKey = "input view title 3"
+    private let inputsViewText4: LocalizedStringKey = "input view title 4"
+    
     //body
     var body: some View {
         VStack{
             
             //Title
             Group{
-                Text("제목")
+                Text(inputsViewText1)
                     .font(.custom(notoRegular, size: 12))
                     .frame(maxWidth: .infinity,alignment: .leading)
                     .foregroundColor(.white)
@@ -33,7 +38,7 @@ struct TextInputsView: View {
 
                 ZStack {
                     if title.isEmpty{
-                        Text("뭘 잊고 싶으신가요?")
+                        Text(inputsViewText2)
                             .font(.custom(notoLight, size: 34))
                             .foregroundColor(placeholderFontColor)
                             .offset(x: -5, y:-15)
@@ -49,14 +54,14 @@ struct TextInputsView: View {
         
             //Description
             Group{
-                Text("내용")
+                Text(inputsViewText3)
                     .font(.custom(notoRegular, size: 12))
                     .frame(maxWidth: .infinity,alignment: .leading)
                     .foregroundColor(.white)
                 
                 ZStack{
                     if description.isEmpty{
-                        Text("무슨 일이 있었나요?")
+                        Text(inputsViewText4)
                             .font(.custom(notoLight, size: 34))
                             .foregroundColor(placeholderFontColor)
                             .frame(maxWidth: .infinity,alignment: .leading)

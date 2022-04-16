@@ -23,6 +23,13 @@ struct IntroView: View {
     
     @State private var fadeInOut = false
     
+    // 언어별 text
+    private let introText1: LocalizedStringKey = "use airpods"
+    private let introText2: LocalizedStringKey = "intro title 1"
+    private let introText3: LocalizedStringKey = "intro title 2"
+    private let introText4: LocalizedStringKey = "intro title 3"
+    private let introText5: LocalizedStringKey = "touch the screen"
+    
     
     var body: some View {
         ZStack{
@@ -30,7 +37,7 @@ struct IntroView: View {
                 Spacer()
                 Image("logo_png")
                 Spacer()
-                Text("불멍화음은 이어폰 사용을 권장합니다.")
+                Text(introText1)
                     .tracking(-0.54)
                     .padding()
                     .font(.system(size: 14).weight(.ultraLight))
@@ -59,7 +66,7 @@ struct IntroView: View {
                 
                 Group {
                     HStack {
-                        Text("오늘 하루,")
+                        Text(introText2)
                             .tracking(-2.4)
                             .opacity(isAppear2 ? 1 : 0)
                             .animation(.easeIn(duration: 0.8), value: isAppear2)
@@ -69,7 +76,7 @@ struct IntroView: View {
                     }
                     
                     HStack {
-                        Text("쉬어가는")
+                        Text(introText3)
                             .tracking(-2.4)
                             .opacity(isAppear3 ? 1 : 0)
                             .animation(.easeIn(duration: 0.8), value: isAppear3)
@@ -79,7 +86,7 @@ struct IntroView: View {
                     }
                     
                     HStack {
-                        Text("그 순간")
+                        Text(introText4)
                             .tracking(-2.4)
                             .opacity(isAppear3 ? 1 : 0)
                             .animation(.easeIn(duration: 0.8), value: isAppear3)
@@ -92,7 +99,7 @@ struct IntroView: View {
                 Spacer()
                 
                 HStack {
-                    Text("화면을 터치하세요")
+                    Text(introText5)
                         .opacity(isAppear4 ? 1 : 0)
                         .animation(.easeIn(duration: 0.8), value: isAppear4)
                         .font(.system(size: 14).weight(.ultraLight))

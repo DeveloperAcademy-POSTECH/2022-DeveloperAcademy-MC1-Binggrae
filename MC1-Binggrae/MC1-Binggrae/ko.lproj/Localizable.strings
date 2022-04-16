@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  MC1-Binggrae
+
+  Created by LeeJaehoon on 2022/04/16.
+  
+*/
+
+// IntroView
+"use airpods" = "불멍화음은 이어폰 사용을 권장합니다.";
+"intro title 1" = "오늘 하루,";
+"intro title 2" = "쉬어가는";
+"intro title 3" = "그 순간";
+"touch the screen" = "화면을 터치하세요";
+
+// OutroView
+"outro title 1" = "널 힘들게 했던\n모든 것들이 ";
+"outro title 2" = "다 탔어.";
+"exit" = "종료하기";
+
+
+// CreateView
+// - CreateView
+"%@  create view text1" = "%@  장작과 함께 태울 것을 적어보세요";
+"create view text2" = "태우기";
+
+// - TextInputsView
+"input view title 1" = "제목";
+"input view title 2" = "뭘 잊고 싶으신가요?";
+"input view title 3" = "내용";
+"input view title 4" = "무슨 일이 있었나요?";
+
+// - CardInputsView
+"%@  card inputs view text1" = "%@  장작을 선택하세요";
+
+// - SelectionAlertView
+"SelectionAlertView.chooseWood" = "나무를 선택해주세요";
+"SelectionAlertView.backButton" = "돌아가기";
+
+
+//MatchView
+"MatchView.Light a match" = "성냥을 그어 불을 붙여 보세요";
+"MatchView.next button" = "다음으로";
+
+
+//FirewoodView
+// - FirewoodView
+"FirewoodView.cancel" = "중단하기";
+"FirewoodView.restart" = "태우기를 시작하려면 화면을 터치하세요";
+"FirewoodView.minutes" = "분      ";
+"FirewoodView.seconds" = "초   ";
+
+
+// - CustomAlertView
+"CustomAlertView.cancelQ" = "중단하시겠습니까?";
+"CustomAlertView.message1" = "확인을 누르시면";
+"CustomAlertView.message2" = "마지막 화면으로 이동합니다";
+"CustomAlertView.cancelButton" = "취소";
+"CustomAlertView.confirmButton" = "확인";
+

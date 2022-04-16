@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  MC1-Binggrae
+
+  Created by LeeJaehoon on 2022/04/16.
+  
+*/
+
+// app title
+"CFBundleDisplayName" = "Bulmeong";

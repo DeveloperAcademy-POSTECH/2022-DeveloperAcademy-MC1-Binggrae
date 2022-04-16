@@ -30,11 +30,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     // var messageBackground = SKSpriteNode()
     var button = SKLabelNode(fontNamed: "Noto Sans CJK KR")
     
+    private let matchViewText1: LocalizedStringKey = "MatchView.Light a match"
+    private let matchViewText2: LocalizedStringKey = "MatchView.next button"
+    
+    
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self // 충돌 감지 scene을 이 scene으로 설정
         backgroundColor = .black
         
-        message.text = "성냥을 그어 불을 붙여 보세요"
+        message.text = matchViewText1.toString()
         message.zPosition = 6
         message.position = CGPoint(x: self.size.width / 2 , y: 60)
         message.fontSize = 14
@@ -46,7 +50,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         messageBackground?.lineWidth = 0.0
         self.addChild(messageBackground!)
         
-        button.text = "다음으로"
+//        button.text = "다음으로"
+        button.text = matchViewText2.toString()
         button.name = "button"
         button.zPosition = 4
         button.position = CGPoint(x: self.size.width / 2, y: 60)

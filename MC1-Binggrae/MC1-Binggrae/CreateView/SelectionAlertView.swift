@@ -19,7 +19,7 @@ struct SelectionAlertView: View {
                         .frame(height: 60)
                     
                     VStack {
-                        Text("나무를 선택해주세요")
+                        Text("SelectionAlertView.chooseWood")
                             .font(.custom("NotoSansCJKkr-Regular", size: 20))
                             .foregroundColor(.white)
                     }.frame(width: 310, height: 77)
@@ -36,7 +36,7 @@ struct SelectionAlertView: View {
                         Button {
                             isShowing.toggle()
                         } label: {
-                            Text("돌아가기")
+                            Text("SelectionAlertView.backButton")
                                 .font(.custom("NotoSansCJKkr-Regular", size: 15))
                                 .frame(width: 310, height: 60)
                                 .foregroundColor(.white)

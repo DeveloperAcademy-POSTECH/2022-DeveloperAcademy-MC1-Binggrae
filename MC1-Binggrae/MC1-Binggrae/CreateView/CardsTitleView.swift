@@ -21,7 +21,7 @@ struct CardsTitleView: View {
             //Define
             let one = Text("1").font(.custom(notoThin, size: 54))
 
-            Text("\(one)  장작을 선택하세요")
+            Text("\(one)  card inputs view text1")
                 .font(.custom(notoLight, size: 18))
             Spacer()
         }
