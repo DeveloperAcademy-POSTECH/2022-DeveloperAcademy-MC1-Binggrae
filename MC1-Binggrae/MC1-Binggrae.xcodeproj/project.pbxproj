@@ -683,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 44CVK5WU2L;
+				DEVELOPMENT_TEAM = 76AJ433CP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";
@@ -697,7 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kim.MC1Binggrae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kim.Bulmeong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -713,7 +713,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-Binggrae/Preview Content\"";
-				DEVELOPMENT_TEAM = 44CVK5WU2L;
+				DEVELOPMENT_TEAM = 76AJ433CP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-Binggrae/Info.plist";
@@ -727,7 +727,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kim.MC1Binggrae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kim.Bulmeong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
